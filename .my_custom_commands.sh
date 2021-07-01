@@ -1,8 +1,7 @@
 #!/bin/bash
 project_path() {
-    echo "/home/mish/custom_commands/"
+    echo "/home/$(whoami)/custom_commands/"
 }
-
 
 function bandit() {
   # changing to the directory where script is installed so we can
