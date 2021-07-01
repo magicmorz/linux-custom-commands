@@ -1,6 +1,14 @@
 #!/bin/bash
-# prints the input
+project_path() {
+    echo "/home/mish/custom_commands/"
+}
+
+
 function bandit() {
+  # changing to the directory where script is installed so we can
+  # read from passwords.txt
+  projectPath="$(project_path)"
+  cd $projectPath
   # find number of known passwords
   numOfLines=$(wc -l passwords.txt | awk '{ print $1 }')
   # read requested level from user
