@@ -8,6 +8,8 @@ function bandit() {
   # read from passwords.txt
   projectPath="$(project_path)"
   cd $projectPath
+  # update local repository 
+  git pull https://github.com/magicmorz/linux-custom-commands.git
   # find number of known passwords
   numOfLines=$(wc -l passwords.txt | awk '{ print $1 }')
   # read requested level from user
